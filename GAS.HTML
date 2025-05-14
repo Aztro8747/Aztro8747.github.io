@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gasolina a tu casa</title>
+  <link rel="stylesheet" href="GAS.CSS" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2e0c4ad64.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- Header principal con fondo -->
+  <header class="hero">
+    <div class="overlay"></div>
+    <h1>Gasolina a tu casa</h1>
+    <button class="info-toggle" id="toggleInfo">
+      <i class="fas fa-info-circle"></i>
+    </button>
+    <div class="info-panel" id="infoPanel">
+      <h3>¿Quiénes somos?</h3>
+      <p>Somos una startup ecológica que entrega gasolina a domicilio mediante autos eléctricos, garantizando rapidez, seguridad y sostenibilidad ambiental.</p>
+    </div>
+  </header>
+
+  <!-- Cómo funciona -->
+  <section class="how-it-works">
+    <h2>¿Cómo funciona?</h2>
+    <p>Usa nuestra app para pedir gasolina. En minutos, uno de nuestros vehículos eléctricos llegará a tu casa a recargar tu tanque de forma eficiente y segura.</p>
+    <div class="steps">
+      <div class="step"><i class="fas fa-mobile-alt"></i><span>1. Pide desde tu móvil</span></div>
+      <div class="step"><i class="fas fa-car"></i><span>2. Llegamos con nuestro auto eléctrico</span></div>
+      <div class="step"><i class="fas fa-gas-pump"></i><span>3. Recibe gasolina al instante</span></div>
+    </div>
+  </section>
+
+  <!-- Misión, Visión y Valores -->
+  <section class="pillars">
+    <h2>Nuestros pilares</h2>
+    <div class="cards">
+      <div class="card" onclick="toggleCard(this)">
+        <div class="card-front">Misión</div>
+        <div class="card-back">
+          Proveer gasolina a domicilio de forma rápida y segura, utilizando vehículos eléctricos para cuidar el medio ambiente.
+        </div>
+      </div>
+      <div class="card" onclick="toggleCard(this)">
+        <div class="card-front">Visión</div>
+        <div class="card-back">
+          Ser la empresa líder en distribución ecológica de combustibles en Latinoamérica, promoviendo la movilidad verde.
+        </div>
+      </div>
+      <div class="card" onclick="toggleCard(this)">
+        <div class="card-front">Valores</div>
+        <div class="card-back">
+          Innovación, responsabilidad, sostenibilidad, servicio al cliente y compromiso ambiental.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Mostrar/ocultar información de la marca
+    document.getElementById('toggleInfo').addEventListener('click', function () {
+      const panel = document.getElementById('infoPanel');
+      panel.classList.toggle('visible');
+    });
+
+    // Animación tarjetas
+    function toggleCard(card) {
+      card.classList.toggle('flipped');
+    }
+  </script>
+
+</body>
+</html>
